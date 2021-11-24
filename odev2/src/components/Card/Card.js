@@ -8,7 +8,6 @@ const Card = props => {
     <View style={styles.container}>
       <Text style={styles.name}>{props.name}</Text>
       <Text style={styles.price}>{props.price}</Text>
-      <Text style={styles.price}>lalallala</Text>
     </View>
   );
 };
