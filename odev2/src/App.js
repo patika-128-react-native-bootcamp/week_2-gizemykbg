@@ -1,22 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import {SafeAreaView, View, StyleSheet, Dimensions} from 'react-native';
-import AddBox from './components/AddBox';
-import Card from './components/Card/Card';
-import Button from './components/FilterButton/FilterButton';
+import List from './components/List';
 
 const App = () => {
-  const [data, setData] = useState([]);
-
-  const handleClick = () => {
-    console.log('Selam Giz');
-  };
   return (
     <SafeAreaView>
       <View style={styles.container}>
-        <Button onPress={handleClick} text="Artan Fiyat" />
-        <Card name={name} price={price} />
-        <AddBox data={data} setData={setData} />
+        <List />
       </View>
     </SafeAreaView>
   );
