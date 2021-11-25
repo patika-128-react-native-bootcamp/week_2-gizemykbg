@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {ScrollView, View, FlatList} from 'react-native';
+import {SafeAreaView, View, FlatList} from 'react-native';
 import Card from '../Card/Card';
 import AddBox from '../AddBox';
 import Button from '../FilterButton';
@@ -40,25 +40,21 @@ const List = () => {
   const renderSeperator = () => <View style={styles.seperator} />;
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.button_container}>
         <Button onPress={handleAsc} text="Artan Fiyat" />
         <Button onPress={handleDesc} text="Azalan fiyat" />
         <Button onPress={handleDate} text="Tarih" />
       </View>
-      <View>
-        <FlatList
-          style={styles.list_container}
-          data={data}
-          renderItem={renderData}
-          keyExtractor={item => item.id.toString()}
-          ItemSeparatorComponent={renderSeperator}
-        />
-      </View>
-      <View style={styles.add_container}>
-        <AddBox data={data} setData={setData} />
-      </View>
-    </View>
+
+      <FlatList
+        data={data}
+        renderItem={renderData}
+        keyExtractor={item => item.id.toString()}
+        ItemSeparatorComponent={renderSeperator}
+      />
+      <AddBox data={data} setData={setData} />
+    </SafeAreaView>
   );
 };
 export default List;
