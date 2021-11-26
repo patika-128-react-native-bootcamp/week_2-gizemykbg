@@ -2,4 +2,4 @@
 
 ## Ödev Görüntüsü
 
-![product price listing](odev2app.gif)
+![product price listing](https://user-images.githubusercontent.com/41079740/143575541-a137f312-397e-4a16-b466-02d717e462be.gif)
